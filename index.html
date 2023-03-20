@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 
 <html>
-
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +38,7 @@
 
             a.stream {
                 color: #9ca928;
+                font-size: 1vw;
             }
 
             h2 {
@@ -68,6 +70,16 @@
                 width: 75vw;
             }
 
+            div.head {
+                width: 90%;
+                margin-bottom: 5%;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+            }
+
             div.row {
                 width: 90%;
                 margin-bottom: 5%;
@@ -90,14 +102,20 @@
                 color: #2a6791;
             }
 
+            iframe {
+                width: 350px; 
+                height: 786px; 
+            }
+
             img {
                 max-height: 100%;
                 margin-top: auto; margin-bottom: auto;
             }
 
-            @media screen and (max-width: 1600) and (max-height: 2600) { 
+            @media screen and (max-width: 780px) { 
                 a.stream {
                     color: #e6eef7;
+                    font-size: 6vw;
                 }
 
                 div.main {
@@ -107,23 +125,28 @@
 
                 h2 {
                     color: #f0f5e9;
-                    font-size: 8vw; 
+                    font-size: 36px; 
                 }
 
                 h3.title {
                     color: #f0f5e9;
-                    font-size: 10vw; 
+                    font-size: 40px; 
                 }
 
                 p.bio {
                     color: #2a6791;
-                    font-size: 24px;
+                    font-size: 20px;
                 }
 
                 p.quote {
                     color: #e6eef7;
-                    font-size: 24px;
+                    font-size: 20px;
                 }
+
+                iframe {
+                    width: 300px; 
+                    height: 750px; 
+            }
             }
 
         </style>
@@ -140,7 +163,7 @@
     <body style = 'background-color: #86c6c0;'>
         <div class = "main" style = "margin: auto;">
 
-            <div class = "row" style = "height: 10vw">
+            <div class = "head" style = "height: 10vh">
                 <img src = "assets/housefly.png", style = "margin-left: 0vw; margin-right: 0vw;">
                 <h3 class = "title">coraldefense</h3>
             </div>
@@ -161,25 +184,29 @@
             </p>
 
             <div class = "row" style = "display: inline-block;">
-                <iframe style="border: 0; width: 350px; height: 786px; margin-left: auto; margin-right: auto; padding-top: 5vh; padding-bottom: 0vh;" 
+                <iframe class = "player" style="border: 0; margin-left: auto; margin-right: auto; padding-top: 5vh; padding-bottom: 0vh;" 
                     src="https://bandcamp.com/EmbeddedPlayer/album=615954300/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless>
                     <a href="https://coraldefense.bandcamp.com/album/housefly-sting">housefly sting by coraldefense</a>
                 </iframe>
             </div>
 
-            <div class = "row" style = "display: inline-block; font-family: Michroma; font-size: 24px;">
+            <div class = "row" style = "display: inline-block; font-family: Michroma;">
                 <a class = "stream" href = "https://open.spotify.com/album/2K804my8lbYqzDmQbmGM2i?si=q2sQz8x8St63O6YVAiGfpg" style = "padding-left: 2%; padding-right: 2%;">Spotify stream</a>
+                <br> <br>
                 <a class = "stream" href = "https://music.apple.com/us/album/housefly-sting/1623469993" style = "padding-left: 2%; padding-right: 2%;">Apple Music stream</a>
             </div>
 
             <h2>bio</h2>
 
             <div class = "row">
+                <img src = "assets/press1_crop.jpg", style = "margin-left: 1vw; margin-right: 1vw; height: 40vh;">
+            </div>
+            <div class = "row">
                 <!-- TODO: if the screen size is under a certain size make the pic go up top -->
                 <p class = "bio" style = "padding-left: 5vw; padding-right: 5vw; margin: auto;">
                     Coraldefense is Emily Mo, a Boston-based experimental pop musician who sonically illustrates the visions in her mind’s eye with distorted synth textures and tight electronic rhythms. Emily tought herself to play the piano as a child, but quickly found that she enjoyed creating her own songs more than learning to play others’ songs, and has been making music ever since. Originally a bedroom songwriter with a passion for oddball DIY sound design, she eventually shifted heavily towards electronic production in order to sculpt more vivid, wondrous sonic textures.
                 </p>
-                <img src = "assets/press1_crop.jpg", style = "margin-left: 1vw; margin-right: 1vw; height: 40vh;">
+                
             </div>
 
             <div class = "section_head" style = "display: inline-block;">
