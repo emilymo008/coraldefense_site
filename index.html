@@ -59,12 +59,12 @@
                 font-family: Barlow Condensed; 
                 font-style: italic;
                 color: #86c6c0;
-                font-size: 8vw; 
+                font-size: 80px; 
                 margin-left: 2vw; 
                 margin-right: 2vw; 
                 margin-top: auto; 
                 margin-bottom: auto;
-                vertical-align: middle;
+                vertical-align: top;
             }
 
             div.main {
@@ -75,6 +75,7 @@
 
             div.head {
                 width: 90%;
+                height: 100px;
                 margin-bottom: 5%;
                 display: flex;
                 justify-content: center;
@@ -94,6 +95,18 @@
 
             }
 
+            div.gallery {
+                width: 90%;
+                /* height: 40vh; */
+                margin-bottom: 5%;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+                
+            }
+
             p.bio {
                 color: #9ca928;
                 font-size: 18px;
@@ -110,7 +123,16 @@
                 height: 786px; 
             }
 
-            img {
+            img.gallery {
+                height: 100%;
+                margin-top: auto; margin-bottom: auto;
+                min-width: 0; /* adding min width and min height allows the images to shrink to fit the div */
+                min-height: 0;
+                /* flex: auto */
+                object-fit: contain;
+            }
+
+            img.bio {
                 max-height: 100%;
                 margin-top: auto; margin-bottom: auto;
             }
@@ -125,6 +147,20 @@
                     background-color: #86c6c0;
                     width: 95vw;
                 }
+
+                
+                div.gallery { 
+                    width: 100%;
+
+                    /* TODO: this is impossible (this is from when I was trying to make it vertical)
+                    display: block;
+                    height: 100vh;
+                    margin-top: 50%;
+                    margin-bottom: 50%;
+                    flex-direction: column; 
+                    align-items: center;*/  
+                }
+                
 
                 h2 {
                     color: #f0f5e9;
@@ -166,7 +202,7 @@
     <body style = 'background-color: #86c6c0;'>
         <div class = "main" style = "margin: auto;">
 
-            <div class = "head" style = "height: 10vh">
+            <div class = "head">
                 <img src = "assets/housefly.png", style = "margin-left: 0vw; margin-right: 0vw;">
                 <h3 class = "title">coraldefense</h3>
             </div>
@@ -175,11 +211,12 @@
                 Coraldefense is Emily Mo, an experimental pop musician based in the Boston area. <br> <br> In her 2022 album <em>Housefly Sting</em>, Coraldefense blends glitchy electronics with silky, dreamy synth textures, pulling influences from artists like Broadcast, Sweet Trip, and Sheena Ringo. <em>Housefly Sting</em> lyrically explores the chaotic ripple effect of human interactions and the ironic emptiness of the infinitely resourceful internet. 
             </p>
 
-            <div class = "row" style = "height: 20vw">
-                <!-- TODO: make images vertical if screen width is under a certain point -->
-                <img src = "assets/pic2.jpg", style = "margin-left: 1vw; margin-right: 1vw;">
-                <img src = "assets/pic1.jpeg", style = "margin-left: 1vw; margin-right: 1vw;">
-                <img src = "assets/pic3.jpg", style = "margin-left: 1vw; margin-right: 1vw;">
+            <div class = "gallery">
+                <!-- TODO: div is not resizing with images in mobile mode, due to known challenges with vertical alignment -->
+                <!-- TODO: make images clickable to expand -->
+                <img class = gallery src = "assets/pic2.jpg", style = "margin-left: 1vw; margin-right: 1vw;">
+                <img class = gallery src = "assets/pic1.jpeg", style = "margin-left: 1vw; margin-right: 1vw;">
+                <img class = gallery src = "assets/pic3.jpg", style = "margin-left: 1vw; margin-right: 1vw;">
             </div>
 
             <p class = "quote" style = "padding-left: 5vw; padding-right: 5vw;">
@@ -202,7 +239,7 @@
             <h2>bio</h2>
 
             <div class = "row">
-                <img src = "assets/press1_crop.jpg", style = "margin-left: 1vw; margin-right: 1vw; height: 40vh;">
+                <img class = 'bio' src = "assets/press1_crop.jpg" style = "margin-left: 1vw; margin-right: 1vw; height: 40vh;">
             </div>
             <div class = "row">
                 <!-- TODO: if the screen size is under a certain size make the pic go up top -->
