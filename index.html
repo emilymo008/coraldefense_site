@@ -137,6 +137,35 @@
                 margin-top: auto; margin-bottom: auto;
             }
 
+            .message {
+                    min-height: 100px;
+                    height: 100px;
+                    width: 200px;
+            }
+
+            input, textarea {
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                border: 2px solid #86c6c0;
+                background: #f5f8fc;
+                font-size: 16px;
+                font-family: camingocoderegular;
+                color: #2a6791;
+                padding: 10px;
+                margin: auto
+            }
+
+            label {
+                font-family: Michroma;
+                color: #2a6791;
+                font-size: 16px;
+
+            }
+
+
+
+
             @media screen and (max-width: 780px) { 
                 a.stream {
                     color: #e6eef7;
@@ -190,7 +219,8 @@
                 iframe {
                     width: 300px; 
                     height: 750px; 
-            }
+                }
+
             }
 
         </style>
@@ -258,14 +288,15 @@
                 <h2>contact</h2>
             </div>
 
-            <div class = "form">
-                <form action="https://getform.io/f/515a1294-d90b-42d6-aa81-18079f2be61a" method="POST">
+            <div class = "row">
+                <form class = "contact_form" action="https://getform.io/f/515a1294-d90b-42d6-aa81-18079f2be61a" method="POST">
                     <label for = "subject">Subject:</label> <br>
-                    <input type = "text" name = "subject"> <br>
+                    <input type = "text" name = "subject"> <br><br>
                     <label for = "email">Email address:</label><br>
-                    <input type= "email" name = "email"><br>
+                    <input type= "email" name = "email"><br><br>
                     <label for = "email">Message:</label><br>
-                    <input type="text" name="message"><br>
+                    <!-- <input class = message type="text" name="message"><br> <br> -->
+                    <textarea name="message" rows="4" cols="50"></textarea> <br><br>
                     <button type="submit">Send</button>
                 </form>
             </div>
